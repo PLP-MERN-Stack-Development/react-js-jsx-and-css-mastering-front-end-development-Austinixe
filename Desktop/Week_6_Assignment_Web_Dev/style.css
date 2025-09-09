@@ -1,0 +1,227 @@
+/* ===========================
+   style.css — Consolidated & fixed
+   =========================== */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* -------- Variables -------- */
+:root{
+  --accent: #007BFF;
+  --accent-strong: #2563eb;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --shadow: rgba(2,6,23,0.08);
+}
+
+/* -------- Reset / base -------- */
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+  transition: background-color .35s ease, color .35s ease;
+  padding-bottom:48px;
+}
+
+/* -------- Header -------- */
+header{
+  text-align:center;
+  padding:28px 18px;
+  background:var(--accent);
+  color:#fff;
+}
+header h1{ margin:0; font-weight:700; font-size:1.6rem; }
+header p{ margin-top:8px; opacity:0.94; font-weight:500; }
+
+/* -------- Generic button (global) -------- */
+button{
+  cursor:pointer;
+  border:0;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  transition: transform .12s, background .12s, box-shadow .12s;
+}
+button:hover{ transform: translateY(-2px); }
+button:active{ transform: translateY(0); }
+button:focus{ outline:3px solid rgba(0,123,255,0.12); }
+
+/* Ensure fixed FAQ toggle stands out */
+#faq-toggle{
+  position:fixed; top:20px; left:20px; z-index:1200;
+  box-shadow:0 8px 26px var(--shadow);
+}
+
+/* -------- Section cards -------- */
+section{
+  max-width:920px;
+  margin:28px auto;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 12px 30px var(--shadow);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+section:hover{ transform: translateY(-4px); }
+
+/* Headings */
+h2{ color:var(--accent); margin:0 0 12px 0; }
+
+/* -------- Counter area -------- */
+#counter-section{ text-align:center; }
+#counter-section p{ margin:0.6rem 0; font-size:1.05rem; }
+#bonus-message{ color:#f59e0b; font-weight:700; min-height:1.15rem; }
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.22); }
+  100% { transform: scale(1); }
+}
+.pop { display:inline-block; animation: pop .32s ease; }
+
+#timer{ font-weight:800; color:var(--accent-strong); }
+
+/* -------- Form styling -------- */
+#form-section{ max-width:720px; margin:32px auto; padding:28px; }
+#form-section h2{ text-align:center; margin-bottom:6px; }
+#form-section p { text-align:center; color:var(--muted); margin-bottom:18px; }
+
+#signup-form label{ display:block; margin-top:12px; font-weight:700; color:#333; }
+#signup-form input,
+#signup-form select,
+#signup-form textarea {
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  font-size:1rem;
+  width:100%;
+  margin-top:6px;
+}
+#signup-form input:focus,
+#signup-form select:focus,
+#signup-form textarea:focus {
+  outline:none; border-color:var(--accent); box-shadow:0 0 6px rgba(59,130,246,0.12);
+}
+#signup-form textarea{ min-height:100px; resize:vertical; }
+
+#signup-form button{
+  width:100%;
+  padding:12px;
+  margin-top:20px;
+  font-size:1rem;
+}
+
+/* -------- Tabs -------- */
+.tabs{ margin-bottom:12px; }
+.tab-btn{
+  background:#ebeef6; color:var(--text);
+  padding:8px 12px; margin-right:6px; border-radius:8px; border:none;
+}
+.tab-btn.active{ background:var(--accent); color:#fff; }
+.tab-content{ padding:12px; background:#fbfbff; border-radius:8px; display:none; }
+.tab-content.active{ display:block; }
+
+/* -------- FAQ Sidebar -------- */
+#faq-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* hidden off screen */
+  width: 300px;
+  height: 100%;
+  background: #f4f4f9;
+  border-right: 2px solid #ddd;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+#faq-sidebar.active { left: 0; }
+#faq-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+}
+.faq { margin-bottom: 15px; }
+.faq-question {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  font-size: 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.faq-question:hover { background: var(--accent-strong); }
+.faq-answer {
+  display: none;
+  margin-top: 8px;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid var(--accent);
+  border-radius: 5px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+.faq-answer.active {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* -------- Dark Mode -------- */
+body.dark-mode {
+  background:#111827;
+  color:#f9fafb;
+}
+
+body.dark-mode section {
+  background:#1f2937;
+  color:#f9fafb;
+}
+
+body.dark-mode header {
+  background:#2563eb;
+}
+
+body.dark-mode button {
+  background:#374151;
+  color:#f9fafb;
+}
+
+body.dark-mode .tab-btn.active {
+  background:#2563eb;
+}
+/* -------- Footer -------- */
+footer {
+  text-align: center;
+  padding: 18px;
+  background: var(--accent);
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

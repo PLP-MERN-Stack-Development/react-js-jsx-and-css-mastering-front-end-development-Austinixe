@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Page - Week 6 Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Toggle FAQ Sidebar -->
+    <button id="faq-toggle">📘 FAQ</button>
+
+    <!-- Header -->
+    <header>
+      <h1>Welcome to My Interactive Web Page 🚀</h1>
+      <p>
+        Experience event handling, interactivity, and form validation with
+        JavaScript.
+      </p>
+      <button id="mode-toggle">🌗 Toggle Dark/Light Mode</button>
+    </header>
+
+    <!-- Counter Game -->
+    <section id="counter-section">
+      <h2>Counter Game 🎯</h2>
+      <p>
+        Click ‘Increase’ to grow your score. Beat your high score before time
+        runs out!
+      </p>
+      <p>Time Left: <span id="timer">30</span> seconds</p>
+      <p>
+        Score: <span id="counter">0</span> | High Score:
+        <span id="high-score">0</span>
+      </p>
+      <button id="increment-btn">Increase</button>
+      <button id="reset-btn">Reset</button>
+      <p id="bonus-message"></p>
+    </section>
+
+    <!-- Dropdown Section -->
+    <section id="dropdown-section">
+      <h2>Choose Your Favorite Language 🖥️</h2>
+      <select id="language-select">
+        <option value="">--Select--</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+        <option value="Java">Java</option>
+      </select>
+      <p id="selected-language"></p>
+    </section>
+
+    <!-- Tabbed Interface -->
+    <section id="tabs-section">
+      <h2>Learn About Web Development 🌍</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="html">HTML</button>
+        <button class="tab-btn" data-tab="css">CSS</button>
+        <button class="tab-btn" data-tab="js">JavaScript</button>
+      </div>
+      <div class="tab-content active" id="html">
+        <p>
+          HTML structures the content of web pages using elements like headings,
+          paragraphs, and images.
+        </p>
+      </div>
+      <div class="tab-content" id="css">
+        <p>
+          CSS styles the web pages, controlling layout, colors, fonts, and
+          responsiveness.
+        </p>
+      </div>
+      <div class="tab-content" id="js">
+        <p>
+          JavaScript adds interactivity, event handling, and dynamic features to
+          web pages.
+        </p>
+      </div>
+    </section>
+
+    
+    <!-- Form Section -->
+<section id="form-section">
+  <h2>Software Program Application Form 📝</h2>
+  <p>Please complete this form to apply for our interactive software training program.</p>
+
+  <form id="signup-form">
+    <!-- Full Name -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+    <!-- Email -->
+    <label for="email">Email Address:</label>
+    <input type="text" id="email" name="email" placeholder="example@email.com">
+
+    <!-- Phone -->
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="+234 812 345 6789">
+
+    <!-- Password -->
+    <label for="password">Create Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter password">
+
+    <!-- Confirm Password -->
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password">
+
+    <!-- Dropdown: Favorite Programming Language -->
+    <label for="language-select">Preferred Programming Language:</label>
+    <select id="language-select" name="language">
+      <option value="">--Select--</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="Java">Java</option>
+    </select>
+
+    <!-- Experience Level -->
+    <label for="experience">Experience Level:</label>
+    <select id="experience" name="experience">
+      <option value="">--Select--</option>
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+
+    <!-- Motivation -->
+    <label for="motivation">Why do you want to join this program?</label>
+    <textarea id="motivation" name="motivation" rows="4" placeholder="Write your answer here..."></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <div id="form-messages"></div>
+</section>
+
+
+    <!-- Sidebar FAQ -->
+   <!-- FAQ Sidebar -->
+<aside id="faq-sidebar">
+  <h2>Frequently Asked Questions ❓</h2>
+
+  <div class="faq">
+    <button class="faq-question">❓ What is this website about?</button>
+    <p class="faq-answer">This website showcases interactive web page features using JavaScript. You can explore games, dropdowns, tabs, and forms—all without reloading the page.</p>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">🎮 How do I play the counter game?</button>
+    <p class="faq-answer">Click the ‘Increase’ button to raise your score. Try to beat your high score before the timer runs out! Occasionally, bonus points may appear for extra fun.</p>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">💡 Why use JavaScript for form validation?</button>
+    <p class="faq-answer">JavaScript validation ensures users fill out forms correctly before submission. It improves usability by showing instant error messages and confirmation without reloading the page.</p>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">⚡ How do the tabs work?</button>
+    <p class="faq-answer">Click on any tab to view different content instantly. This uses JavaScript to show or hide sections, making your browsing smoother and faster.</p>
+  </div>
+</aside>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Synergy Consult. All rights reserved.</p>
+      <p>
+        Connect with us: <a href="#">Facebook</a> | <a href="#">Twitter</a> |
+        <a href="#">
+          🔗 LinkedIn: https://www.linkedin.com/in/augustine-salami-9a2a83232 </a
+        >| <a href="#">GitHub: https://github.com/Austinixe</a>|
+      </p>
+      <p>“Building interactive web experiences one click at a time!”</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
