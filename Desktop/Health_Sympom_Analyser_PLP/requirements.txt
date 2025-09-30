@@ -1,0 +1,6 @@
+Flask
+python-dotenv
+transformers
+torch
+soundfile
+huggingface_hub
