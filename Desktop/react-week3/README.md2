@@ -1,0 +1,95 @@
+# Week 3: React.js, JSX, and Tailwind CSS – Mastering Front-End Development
+
+## 🚀 Objective
+Build a responsive React application using JSX and Tailwind CSS that demonstrates component architecture, state management, hooks usage, and API integration.
+
+---
+
+## 📂 Project Overview
+This project is a Task Manager / Todo App** built with React and Tailwind CSS. Features include:
+
+- Add, delete, and mark tasks as completed
+- Filter tasks by **All**, **Active**, or **Completed**
+- Theme switcher: **Light / Dark Mode**
+- Responsive design for mobile, tablet, and desktop
+- Persistent tasks using a **custom `useLocalStorage` hook**
+- Clean component-based architecture:
+  - `Navbar` with navigation links and theme toggle
+  - `TaskManager` for managing tasks
+  - `Button` component with variants
+  - `Footer` for copyright
+
+---
+
+## 🛠️ Setup Instructions
+
+1. Clone the repository**
+```bash
+git clone <https://github.com/PLP-MERN-Stack-Development/react-js-jsx-and-css-mastering-front-end-development-Austinixe.git>
+cd react-week3
+
+
+
+2. installing dependency
+
+npm install
+
+3  Start the development server:
+  npm run dev
+
+4. Open your browser
+Visit http://localhost:5173
+
+
+📱 Features
+
+Task Management
+
+Add new tasks
+
+Mark tasks as completed
+
+Delete tasks
+
+Filter tasks: All / Active / Completed
+
+Theme Switcher
+
+Light / Dark mode toggle
+
+Responsive Layout
+
+Mobile, tablet, and desktop friendly
+
+Custom Hooks
+
+useLocalStorage to persist tasks
+
+
+📸 Screenshots
+
+assets/Screenshots/screenshotTM.JPG
+
+assets/Screenshots/screenshotTM.JPG
+
+🌐 Deployment
+
+The app is deployed on GitHub Pages:
+Live Demo
+
+
+✅ Submission Checklist
+
+ All project files pushed to GitHub
+
+ Organized project structure
+
+ README with setup instructions
+
+ Screenshots included
+
+ Live URL added
+
+👨‍💻 Author
+
+Your Name – Augustine O. Salami
